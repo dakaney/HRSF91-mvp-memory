@@ -1,0 +1,14 @@
+.keys {
+  border: 1px solid black;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.Table {
+  border: 1px solid black;
+/*  height: 50px;
+  width: 800px;*/
+  text-align: center;
+}
