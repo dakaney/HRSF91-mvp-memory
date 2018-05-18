@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import Table from './Table';
 
 class App extends React.Component {
@@ -29,14 +29,16 @@ class App extends React.Component {
       this.state.totalClicks++
       func("blue");
     } else if (this.state.clicks === 2 && this.state.firstValue !== e.target.id) {
-      this.state.clicks = 1;
+      this.state.clicks = 3;
       func("blue");
       setTimeout(() => {
         this.state.firstClick("black");
+        this.state.clicks = 1;
         func("black"); 
       },800)
       this.state.totalClicks++
-    } else if (this.state.firstValue === e.target.id) {
+    } else if (this.state.clicks === 3){
+    } else if (this.state.clicks === 2 && this.state.firstValue === e.target.id) {
       func("blue");
       this.state.correct++;
       this.state.clicks = 1;
