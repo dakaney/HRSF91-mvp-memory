@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import Table from './Table';
 
 class App extends React.Component {

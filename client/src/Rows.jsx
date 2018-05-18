@@ -5,6 +5,7 @@ class Rows extends React.Component {
     super(props);
     this.state = {
       background: "black",
+      letter: '',
     }
     this.toggleSquare = this.toggleSquare.bind(this);
   }
@@ -17,12 +18,13 @@ class Rows extends React.Component {
   toggleSquare(color) {
     this.setState({
       background: color,
+      letter: this.props.value,
     })
   }
 
   render() { 
     return (
-      <td className="keys" bgcolor={this.state.background} id={this.props.value} onClick={(e) => this.handleClick(e)}> {this.props.value} </td>
+      <td className="keys" bgcolor={this.state.background} id={this.props.value} onClick={(e) => this.handleClick(e)}> {this.state.letter} </td>
     )
   }
 }
