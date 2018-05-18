@@ -4,7 +4,7 @@ class Rows extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      background: "black",
+      background: 'black',
       letter: '',
     }
     this.toggleSquare = this.toggleSquare.bind(this);
@@ -16,10 +16,17 @@ class Rows extends React.Component {
   }
 
   toggleSquare(color) {
-    this.setState({
-      background: color,
-      letter: this.props.value,
-    })
+    if (color === 'blue') {
+      this.setState({
+        background: color,
+        letter: this.props.value,
+      })
+    } else {
+      this.setState({
+        background: color,
+        letter: '',
+      })
+    }
   }
 
   render() { 
